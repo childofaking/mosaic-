@@ -27,7 +27,7 @@ h2 {
 .tile9 {
   height: 230px;
   width: 230px;
-  background-image: url("../images/fruit.jpeg");
+  background-image: url("../images/ocean.jpeg");
   display: inline-block;
 }
 
@@ -68,5 +68,6 @@ h2 {
 
 .tile9 {
   background-position: 100% 100%;
+  background-image: none;
   background: #fff;
 }
