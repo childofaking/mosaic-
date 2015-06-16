@@ -1,8 +1,8 @@
-//empty tile variable and Location
-var emptyTile = $(".tile8");
-var emptyTileLoca = emptyTile.attr("id");
+//empty tile class and Location
+var emptyTile = "tile8";
 
-//all allowed to enter into empty
+
+//all allowed to enter into empty - THIS IS A THOUGHT :)
 var rules = [
   "col0row0",
   "col0row1",
@@ -19,14 +19,29 @@ var rules = [
 
 //identifys tile when clicked
 $(".game").children().click(function() {
-  var currentLocation = $(this).attr("id");
+
+  //current tile class and Location
   var currentTile = $(this).attr("class");
-  console.log(currentTile + " is at " + currentLocation);
+  var currentLoca = $(this).attr("id");
+  var emptyTileLoca = $(".tile8").attr("id");
+
+  //console.log Location and Tile clicked
+  console.log(currentTile + " is at " + currentLoca);
+
+  //need to replace the locations and tiles with event
+  $("#" + currentLoca).removeClass(currentTile).addClass(emptyTile);
+  $("#" + emptyTileLoca).removeClass(emptyTile).addClass(currentTile);
+
+  //reload emptyTile location
+  emptyTileLoca = $(".tile8").attr("id");
+
+  console.log("The empty tile is currently at " + emptyTileLoca);
+
 });
 
 
 
-console.log("The empty tile is currently at " + emptyTileLoca);
+
 console.log("Mosaic has loaded!");
 
 
