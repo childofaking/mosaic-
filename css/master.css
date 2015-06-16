@@ -1,3 +1,7 @@
+#container {
+  padding: 20px;
+}
+
 h1 {
   color: tomato;
 }
@@ -7,15 +11,30 @@ h2 {
 }
 
 
-/* ---------------------- SLICING PHOTO -- */
+/* ---------------------- Game Containers -- */
+
+/*--Outer Container--*/
 .game {
   width: 700px;
   margin: 0 auto;
 }
 
+/*--Columns + Rows--*/
+#col0row0,
+#col0row1,
+#col0row2,
+#col1row0,
+#col1row1,
+#col1row2,
+#col2row0,
+#col2row1,
+#col2row2 {
 
-/* ---------------------- SLICING PHOTO -- */
+}
 
+
+/*--Tile Structure--*/
+.tile0,
 .tile1,
 .tile2,
 .tile3,
@@ -23,50 +42,51 @@ h2 {
 .tile5,
 .tile6,
 .tile7,
-.tile8,
-.tile9 {
+.tile8 {
   height: 230px;
   width: 230px;
-  background-image: url("../images/ocean.jpeg");
+  background-image: url("../images/fruit.jpeg");
+  /*-moz-box-sizing: border-box;
+  box-sizing: border-box;*/
   display: inline-block;
+  margin: -1px;
 }
 
-/* First Row */
-.tile1 {
+/* ---------------------- SLICING PHOTO -- */
+
+.tile0 {
   background-position: 0% 0%;
 }
 
-.tile2 {
+.tile1 {
   background-position: 50% 0%;
 }
 
-.tile3 {
+.tile2 {
   background-position: 100% 0%;
 }
 
-/* Second Row */
-.tile4 {
+.tile3 {
   background-position: 0% 50%;
 }
 
-.tile5 {
+.tile4 {
   background-position: 50% 50%;
 }
 
-.tile6 {
+.tile5 {
   background-position: 100% 50%;
 }
 
-/* Third Row */
-.tile7 {
+.tile6 {
   background-position: 0% 100%;
 }
 
-.tile8 {
+.tile7 {
   background-position: 50% 100%;
 }
 
-.tile9 {
+.tile8 {
   background-position: 100% 100%;
   background-image: none;
   background: #fff;
