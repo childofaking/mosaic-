@@ -10,84 +10,76 @@ h2 {
   font-size: 1.2em;
 }
 
-
-/* ---------------------- Game Containers -- */
-
-/*--Outer Container--*/
+/* ---------------------- Tile Structure & Game Structure -- */
 .game {
-  width: 700px;
+  width: 706px;
+  height: 706px;
   margin: 0 auto;
+  position: relative;
 }
 
-/*--Columns + Rows--*/
-#col0row0,
-#col0row1,
-#col0row2,
-#col1row0,
-#col1row1,
-#col1row2,
-#col2row0,
-#col2row1,
-#col2row2 {
-
-}
-
-
-/*--Tile Structure--*/
-.tile0,
-.tile1,
-.tile2,
-.tile3,
-.tile4,
-.tile5,
-.tile6,
-.tile7,
-.tile8 {
+.tile {
   height: 230px;
   width: 230px;
   background-image: url("../images/fruit.jpeg");
-  /*-moz-box-sizing: border-box;
-  box-sizing: border-box;*/
-  display: inline-block;
-  margin: -1px;
+  position: absolute;
 }
+
+.col0 {
+  left: 2px;
+}
+
+.col1 {
+  left: 234px;
+}
+
+.col2 {
+  left: 466px;
+}
+
+.row0 {
+  top: 2px;
+}
+
+.row1 {
+  top: 234px;
+}
+
+.row2 {
+  top: 466px;
+}
+
 
 /* ---------------------- SLICING PHOTO -- */
 
-.tile0 {
+#tile0 {
   background-position: 0% 0%;
 }
 
-.tile1 {
+#tile1 {
   background-position: 50% 0%;
 }
 
-.tile2 {
+#tile2 {
   background-position: 100% 0%;
 }
 
-.tile3 {
+#tile3 {
   background-position: 0% 50%;
 }
 
-.tile4 {
+#tile4 {
   background-position: 50% 50%;
 }
 
-.tile5 {
+#tile5 {
   background-position: 100% 50%;
 }
 
-.tile6 {
+#tile6 {
   background-position: 0% 100%;
 }
 
-.tile7 {
+#tile7 {
   background-position: 50% 100%;
-}
-
-.tile8 {
-  background-position: 100% 100%;
-  background-image: none;
-  background: #fff;
 }

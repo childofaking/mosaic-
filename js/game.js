@@ -1,41 +1,215 @@
-//empty tile class and Location
-var emptyTile = "tile8";
-
-
-//all allowed to enter into empty - THIS IS A THOUGHT :)
-var rules = [
-  "col0row0",
-  "col0row1",
-  "col0row2",
-  "col1row0",
-  "col1row1",
-  "col1row2",
-  "col2row0",
-  "col2row1",
-  "col2row2"
-];
-
-
-
 //identifys tile when clicked
-$(".game").children().click(function() {
+$(".game").children( ).click(function(evt) {
+  var currentTile = $(this);
+  var game = $(".game").first();
+  var moveTile = function(location) {
+    //remove class
+      currentTile.removeClass();
+    //add class
+      currentTile.addClass(location).addClass("tile");
+  };
 
-  //current tile class and Location
-  var currentTile = $(this).attr("class");
-  var currentLoca = $(this).attr("id");
-  var emptyTileLoca = $(".tile8").attr("id");
 
-  //console.log Location and Tile clicked
-  console.log(currentTile + " is at " + currentLoca);
+  //col0 and row0
+  if (currentTile.hasClass("col0") && currentTile.hasClass("row0")) {
+    if (game.find(".col0.row1").length > 0) {
+      console.log("can't move");
+    }
+    else {
+      console.log("can move");
 
-  //need to replace the locations and tiles with event
-  $("#" + currentLoca).removeClass(currentTile).addClass(emptyTile);
-  $("#" + emptyTileLoca).removeClass(emptyTile).addClass(currentTile);
+    }
 
-  //reload emptyTile location
-  emptyTileLoca = $(".tile8").attr("id");
+    if (game.find(".col1.row0").length > 0) {
+      console.log("can't move");
+    }
+    else {
+      console.log("can move");
+    }
 
-  console.log("The empty tile is currently at " + emptyTileLoca);
+  }
+
+  //col0 and row1
+  else if (currentTile.hasClass("col0") && currentTile.hasClass("row1")) {
+    if (game.find(".col0.row0").length > 0) {
+      console.log("can't move");
+    }
+    else {
+      console.log("can move");
+
+    }
+
+    if (game.find(".col0.row2").length > 0) {
+      console.log("can't move");
+    }
+    else {
+      console.log("can move");
+    }
+
+    if (game.find(".col1.row1").length > 0) {
+      console.log("can't move");
+    }
+    else {
+      console.log("can move");
+    }
+
+  }
+
+  //col0 and row2
+  else if (currentTile.hasClass("col0") && currentTile.hasClass("row2")) {
+    if (game.find(".col0.row1").length > 0) {
+      console.log("can't move");
+    }
+    else {
+      console.log("can move");
+
+    }
+
+    if (game.find(".col1.row2").length > 0) {
+      console.log("can't move");
+    }
+    else {
+      console.log("can move");
+    }
+
+  }
+
+  //col1 and row0
+  else if (currentTile.hasClass("col1") && currentTile.hasClass("row0")) {
+    if (game.find(".col0.row0").length > 0) {
+      console.log("can't move");
+    }
+    else {
+      console.log("can move");
+    }
+
+    if (game.find(".col2.row0").length > 0) {
+      console.log("can't move");
+    }
+    else {
+      console.log("can move");
+    }
+
+  }
+
+  //col1 and row1
+  else if (currentTile.hasClass("col1") && currentTile.hasClass("row1")) {
+    if (game.find(".col1.row0").length > 0) {
+      console.log("can't move");
+    }
+    else {
+      console.log("can move");
+    }
+
+    if (game.find(".col0.row1").length > 0) {
+      console.log("can't move");
+    }
+    else {
+      console.log("can move");
+    }
+
+    if (game.find(".col2.row1").length > 0) {
+      console.log("can't move");
+    }
+    else {
+      console.log("can move");
+    }
+
+    if (game.find(".col1.row2").length > 0) {
+      console.log("can't move");
+    }
+    else {
+      console.log("can move");
+    }
+
+  }
+
+  //col1 and row2
+  else if (currentTile.hasClass("col1") && currentTile.hasClass("row2")) {
+    if (game.find(".col1.row1").length > 0) {
+      console.log("can't move");
+    }
+    else {
+      console.log("can move");
+    }
+
+    if (game.find(".col0.row2").length > 0) {
+      console.log("can't move");
+    }
+    else {
+      console.log("can move");
+    }
+
+    if (game.find(".col2.row2").length > 0) {
+      console.log("can't move");
+    }
+    else {
+      console.log("can move");
+      moveTile("col2 row2");
+    }
+
+  }
+
+  //col2 and row0
+  else if (currentTile.hasClass("col2") && currentTile.hasClass("row0")) {
+    if (game.find(".col1.row0").length > 0) {
+      console.log("can't move");
+    }
+    else {
+      console.log("can move");
+    }
+
+    if (game.find(".col2.row1").length > 0) {
+      console.log("can't move");
+    }
+    else {
+      console.log("can move");
+    }
+
+  }
+
+  //col2 and row1
+  else if (currentTile.hasClass("col2") && currentTile.hasClass("row1")) {
+    if (game.find(".col2.row2").length > 0) {
+      console.log("can't move");
+    }
+    else {
+      console.log("can move");
+    }
+
+    if (game.find(".col1.row1").length > 0) {
+      console.log("can't move");
+    }
+    else {
+      console.log("can move");
+    }
+
+    if (game.find(".col2.row0").length > 0) {
+      console.log("can't move");
+    }
+    else {
+      console.log("can move");
+    }
+
+  }
+
+  //col2 and row2
+  else if (currentTile.hasClass("col2") && currentTile.hasClass("row2")) {
+    if (game.find(".col2.row1").length > 0) {
+      console.log("can't move");
+    }
+    else {
+      console.log("can move");
+    }
+
+    if (game.find(".col1.row2").length > 0) {
+      console.log("can't move");
+    }
+    else {
+      console.log("can move");
+    }
+
+  }
 
 });
 
@@ -43,6 +217,3 @@ $(".game").children().click(function() {
 
 
 console.log("Mosaic has loaded!");
-
-
-//SET IDS ON LOAD -- http://api.jquery.com/attr/
